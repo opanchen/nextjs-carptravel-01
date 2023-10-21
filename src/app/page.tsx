@@ -1,5 +1,11 @@
 const Home = () => {
-  return <div>Home - starting App page</div>;
+  return (
+    <>
+      <section>
+        <h1>Home - starting App page</h1>
+      </section>
+    </>
+  );
 };
 
 export default Home;

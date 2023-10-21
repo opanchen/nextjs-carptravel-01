@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: Props) => {
   return (
     <html lang="en">
-      <body>
+      <body className="app">
         <main>{children}</main>
       </body>
     </html>
