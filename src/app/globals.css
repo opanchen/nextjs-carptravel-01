@@ -4,11 +4,187 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --overlay-gradient: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5));
+  --color-background-primary: rgba(1, 10, 5, 0.9);
+}
+
 * {
   scroll-behavior: smooth;
 }
 
-/* Tailwind Styles */
+/* * Tailwind Styles * */
 .app {
-  @apply font-inter;
+  /* @apply font-inter; */
+  @apply font-inter text-white;
+}
+
+.fixed-full {
+  @apply fixed top-0 right-0 left-0 bottom-0;
+}
+
+.nav_link {
+  @apply text-[18px] tracking-[1.8px] tablet:text-[14px] tablet:tracking-[1.4px];
+}
+
+/*  */
+
+.hero {
+  background-color: var(--color-background-primary);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--overlay-gradient),
+    url("/assets/images/mobile/backgrounds/hero/hero.jpg");
+
+  background-image: var(--overlay-gradient),
+    -webkit-image-set(url("/assets/images/mobile/backgrounds/hero/hero.webp") 1x);
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 100%;
+  background-image: url("/assets/icons/mobile/btn-frame-left.svg");
+  background-repeat: no-repeat;
+}
+
+.hero-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  height: 100%;
+  background-image: url("/assets/icons/mobile/btn-frame-right.svg");
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/mobile/backgrounds/hero/hero@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/mobile/backgrounds/hero/hero@2x.webp")
+            2x);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/hero/hero.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/hero/hero.webp")
+            1x);
+  }
+
+  .hero-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 100%;
+    background-image: url("/assets/icons/tablet/btn-frame-left.svg");
+    background-repeat: no-repeat;
+  }
+
+  .hero-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 100%;
+    background-image: url("/assets/icons/tablet/btn-frame-right.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/hero/hero@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/hero/hero@2x.webp")
+            2x);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/hero/hero.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/hero/hero.webp")
+            1x);
+  }
+
+  .hero-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 100%;
+    background-image: url("/assets/icons/desktop/btn-frame-left.svg");
+    background-repeat: no-repeat;
+  }
+
+  .hero-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 100%;
+    background-image: url("/assets/icons/desktop/btn-frame-right.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1280px) and (min-resolution: 192dpi),
+  screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/hero/hero@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/hero/hero@2x.webp")
+            2x);
+  }
+}
+
+/* ---- */
+
+.logo-text {
+  leading-trim: both;
+  text-edge: cap;
+}
+
+.logo-element::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: aqua; */
+  /* background: url("/public/assets/images/logo-element.png"); */
+  background-image: url("/assets/images/logo-element.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

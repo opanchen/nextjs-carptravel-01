@@ -2,6 +2,8 @@ import "@app/globals.css";
 
 import type { Metadata } from "next";
 
+import { AppBar } from "@components";
+
 type Props = {
   children: React.ReactNode;
 };
@@ -14,7 +16,8 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: Props) => {
   return (
     <html lang="en">
-      <body className="app">
+      <body className="app relative">
+        <AppBar />
         <main>{children}</main>
       </body>
     </html>
