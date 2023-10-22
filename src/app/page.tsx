@@ -1,15 +1,16 @@
-import { Hero } from "@components";
+import { About, Hero } from "@components";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <section
+      <About />
+      {/* <section
         id="about"
         className="min-h-[300px] w-full border-[1px] border-cyan-950"
       >
         Section Who We Are
-      </section>
+      </section> */}
       <section
         id="services"
         className="min-h-[500px] w-full border-[1px] border-cyan-950"

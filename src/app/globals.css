@@ -19,6 +19,18 @@
   @apply font-inter text-white;
 }
 
+.section {
+  @apply py-[54px] tablet:py-[64px] desktop:py-[104px];
+}
+
+.text-heading {
+  @apply text-[40px] tablet:text-[67px] desktop:text-[98px] font-thin leading-[1.4] tracking-[-1.6px] tablet:tracking-[-2.68px] desktop:tracking-[-3.92px] tablet:leading-normal uppercase;
+}
+
+.text-primary {
+  @apply text-[14px] font-extralight leading-[1.428] tablet:text-[16px] tablet:leading-[1.25] desktop:text-[18px] desktop:leading-[1.333];
+}
+
 .fixed-full {
   @apply fixed top-0 right-0 left-0 bottom-0;
 }
@@ -38,6 +50,18 @@
 
   background-image: var(--overlay-gradient),
     -webkit-image-set(url("/assets/images/mobile/backgrounds/hero/hero.webp") 1x);
+}
+
+.section-about {
+  background-color: var(--color-background-primary);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--overlay-gradient),
+    url("/assets/images/mobile/backgrounds/about/about.jpg");
+
+  background-image: var(--overlay-gradient),
+    -webkit-image-set(url("/assets/images/mobile/backgrounds/about/about.webp")
+          1x);
 }
 
 .hero-btn::before {
@@ -73,6 +97,39 @@
       -webkit-image-set(url("/assets/images/mobile/backgrounds/hero/hero@2x.webp")
             2x);
   }
+
+  .section-about {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/mobile/backgrounds/about/about@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/mobile/backgrounds/about/about@2x.webp")
+            2x);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .section-about {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/mobile/backgrounds/about/about-large.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/mobile/backgrounds/about/about-large.webp")
+            1x);
+  }
+}
+
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 480px) and (min-resolution: 192dpi),
+  screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .section-about {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/mobile/backgrounds/about/about-large@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/mobile/backgrounds/about/about-large@2x.webp")
+            2x);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -106,6 +163,15 @@
     background-image: url("/assets/icons/tablet/btn-frame-right.svg");
     background-repeat: no-repeat;
   }
+
+  .section-about {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/about/about.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/about/about.webp")
+            1x);
+  }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
@@ -117,6 +183,15 @@
 
     background-image: var(--overlay-gradient),
       -webkit-image-set(url("/assets/images/tablet/backgrounds/hero/hero@2x.webp")
+            2x);
+  }
+
+  .section-about {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/about/about@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/about/about@2x.webp")
             2x);
   }
 }
@@ -152,6 +227,15 @@
     background-image: url("/assets/icons/desktop/btn-frame-right.svg");
     background-repeat: no-repeat;
   }
+
+  .section-about {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/about/about.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/about/about.webp")
+            1x);
+  }
 }
 
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
@@ -163,6 +247,15 @@
 
     background-image: var(--overlay-gradient),
       -webkit-image-set(url("/assets/images/desktop/backgrounds/hero/hero@2x.webp")
+            2x);
+  }
+
+  .section-about {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/about/about@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/about/about@2x.webp")
             2x);
   }
 }
