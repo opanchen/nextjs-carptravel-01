@@ -2,23 +2,17 @@ import { Container } from "@components";
 
 const About = () => {
   return (
-    <section id="about" className="section-about section">
+    <section id="about" className="background-overlay section-about section">
       <Container>
         <div className="relative flex flex-col gap-[40px] tablet:gap-[64px]">
           {/* Heading and info-column div */}
-          <div
-            //   className="flex flex-col tablet:flex-row gap-[8px] tablet:gap-[76px] tablet:items-start"
-            className="flex flex-col tablet:flex-row gap-[8px] tablet:gap-[76px] desktop:gap-[24px] tablet:items-start"
-          >
+          <div className="flex flex-col tablet:flex-row gap-[8px] tablet:gap-[76px] desktop:gap-[24px] tablet:items-start">
             <h2 className="text-heading shrink-0 tablet:leading-none desktop:translate-y-[-6px]">
               <span className="tablet:text-justify">Who</span>{" "}
               <span className="font-medium">we are</span>
             </h2>
 
-            <div
-              //   className="flex flex-col gap-[20px] tablet:gap-[16px] w-[180px] tablet:w-[220px] tablet:translate-y-[14px]"
-              className="flex flex-col gap-[20px] tablet:gap-[16px] w-[180px] tablet:w-auto desktop:w-[292px]"
-            >
+            <div className="flex flex-col gap-[20px] tablet:gap-[16px] w-[180px] tablet:w-auto desktop:w-[292px]">
               <p className="text-primary">
                 <span className="font-normal">a team of enthusiasts</span> who
                 are fully committed to the mission of creating unforgettable and

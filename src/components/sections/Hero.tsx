@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="hero pt-[104px] pb-[56px] tablet:pt-[124px] tablet:pb-[64px] desktop:pt-[130px] desktop:pb-[104px]">
+    <section className="background-overlay hero pt-[104px] pb-[56px] tablet:pt-[124px] tablet:pb-[64px] desktop:pt-[130px] desktop:pb-[104px]">
       <Container>
         {/* Inner div */}
         <div className="relative flex flex-col gap-[24px] pt-[76px] tablet:flex-row tablet:gap-[48px] desktop:gap-[148px] tablet:pt-0">

@@ -13,7 +13,7 @@
   scroll-behavior: smooth;
 }
 
-/* * Tailwind Styles * */
+/* * Tailwind Styles: * */
 .app {
   /* @apply font-inter; */
   @apply font-inter text-white;
@@ -39,12 +39,15 @@
   @apply text-[18px] tracking-[1.8px] tablet:text-[14px] tablet:tracking-[1.4px];
 }
 
-/*  */
+/* * Background images & pseudo-elements: *  */
 
-.hero {
+.background-overlay {
   background-color: var(--color-background-primary);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero {
   background-image: var(--overlay-gradient),
     url("/assets/images/mobile/backgrounds/hero/hero.jpg");
 
@@ -53,9 +56,6 @@
 }
 
 .section-about {
-  background-color: var(--color-background-primary);
-  background-repeat: no-repeat;
-  background-size: cover;
   background-image: var(--overlay-gradient),
     url("/assets/images/mobile/backgrounds/about/about.jpg");
 
@@ -86,6 +86,62 @@
   background-repeat: no-repeat;
 }
 
+.active-slider-tab::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  transform: translateY(-50%) rotate(45deg);
+  background-color: #fff;
+}
+
+.service-atvs {
+  background-image: var(--overlay-gradient),
+    url("/assets/images/mobile/backgrounds/service/service-01-bg.jpg");
+
+  background-image: var(--overlay-gradient),
+    -webkit-image-set(url("/assets/images/mobile/backgrounds/service/service-01-bg.webp")
+          1x);
+}
+
+.service-climb {
+  background-image: var(--overlay-gradient),
+    url("/assets/images/mobile/backgrounds/service/service-02-bg.jpg");
+
+  background-image: var(--overlay-gradient),
+    -webkit-image-set(url("/assets/images/mobile/backgrounds/service/service-02-bg.webp")
+          1x);
+}
+
+.service-balloon {
+  background-image: var(--overlay-gradient),
+    url("/assets/images/mobile/backgrounds/service/service-03-bg.jpg");
+
+  background-image: var(--overlay-gradient),
+    -webkit-image-set(url("/assets/images/mobile/backgrounds/service/service-03-bg.webp")
+          1x);
+}
+
+.service-skydive {
+  background-image: var(--overlay-gradient),
+    url("/assets/images/mobile/backgrounds/service/service-04-bg.jpg");
+
+  background-image: var(--overlay-gradient),
+    -webkit-image-set(url("/assets/images/mobile/backgrounds/service/service-04-bg.webp")
+          1x);
+}
+
+.service-raft {
+  background-image: var(--overlay-gradient),
+    url("/assets/images/mobile/backgrounds/service/service-05-bg.jpg");
+
+  background-image: var(--overlay-gradient),
+    -webkit-image-set(url("/assets/images/mobile/backgrounds/service/service-05-bg.webp")
+          1x);
+}
+
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
@@ -104,6 +160,51 @@
 
     background-image: var(--overlay-gradient),
       -webkit-image-set(url("/assets/images/mobile/backgrounds/about/about@2x.webp")
+            2x);
+  }
+
+  .service-atvs {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/mobile/backgrounds/service/service-01-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/mobile/backgrounds/service/service-01-bg@2x.webp")
+            2x);
+  }
+
+  .service-climb {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/mobile/backgrounds/service/service-02-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/mobile/backgrounds/service/service-02-bg@2x.webp")
+            2x);
+  }
+
+  .service-balloon {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/mobile/backgrounds/service/service-03-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/mobile/backgrounds/service/service-03-bg@2x.webp")
+            2x);
+  }
+
+  .service-skydive {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/mobile/backgrounds/service/service-04-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/mobile/backgrounds/service/service-04-bg@2x.webp")
+            2x);
+  }
+
+  .service-raft {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/mobile/backgrounds/service/service-05-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/mobile/backgrounds/service/service-05-bg@2x.webp")
             2x);
   }
 }
@@ -172,6 +273,48 @@
       -webkit-image-set(url("/assets/images/tablet/backgrounds/about/about.webp")
             1x);
   }
+
+  .service-atvs {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/service/service-01-bg.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-01-bg.webp")
+            1x);
+  }
+
+  .service-climb {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/service/service-02-bg.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-02-bg.webp")
+            1x);
+  }
+  .service-balloon {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/service/service-03-bg.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-03-bg.webp")
+            1x);
+  }
+  .service-skydive {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/service/service-04-bg.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-04-bg.webp")
+            1x);
+  }
+  .service-raft {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/service/service-05-bg.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-05-bg.webp")
+            1x);
+  }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
@@ -192,6 +335,51 @@
 
     background-image: var(--overlay-gradient),
       -webkit-image-set(url("/assets/images/tablet/backgrounds/about/about@2x.webp")
+            2x);
+  }
+
+  .service-atvs {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/service/service-01-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-01-bg@2x.webp")
+            2x);
+  }
+
+  .service-climb {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/service/service-01-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-02-bg@2x.webp")
+            2x);
+  }
+
+  .service-balloon {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/service/service-03-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-03-bg@2x.webp")
+            2x);
+  }
+
+  .service-skydive {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/service/service-04-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-04-bg@2x.webp")
+            2x);
+  }
+
+  .service-raft {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/tablet/backgrounds/service/service-05-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-05-bg@2x.webp")
             2x);
   }
 }
@@ -236,6 +424,51 @@
       -webkit-image-set(url("/assets/images/desktop/backgrounds/about/about.webp")
             1x);
   }
+
+  .service-atvs {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/service/service-01-bg.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-01-bg.webp")
+            1x);
+  }
+
+  .service-climb {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/service/service-02-bg.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-02-bg.webp")
+            1x);
+  }
+
+  .service-balloon {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/service/service-03-bg.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-03-bg.webp")
+            1x);
+  }
+
+  .service-skydive {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/service/service-04-bg.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-04-bg.webp")
+            1x);
+  }
+
+  .service-raft {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/service/service-05-bg.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-05-bg.webp")
+            1x);
+  }
 }
 
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
@@ -256,6 +489,51 @@
 
     background-image: var(--overlay-gradient),
       -webkit-image-set(url("/assets/images/desktop/backgrounds/about/about@2x.webp")
+            2x);
+  }
+
+  .service-atvs {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/service/service-01-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-01-bg@2x.webp")
+            2x);
+  }
+
+  .service-climb {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/service/service-02-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-02-bg@2x.webp")
+            2x);
+  }
+
+  .service-balloon {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/service/service-03-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-03-bg@2x.webp")
+            2x);
+  }
+
+  .service-skydive {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/service/service-04-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-04-bg@2x.webp")
+            2x);
+  }
+
+  .service-raft {
+    background-image: var(--overlay-gradient),
+      url("/assets/images/desktop/backgrounds/service/service-05-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-05-bg@2x.webp")
             2x);
   }
 }
