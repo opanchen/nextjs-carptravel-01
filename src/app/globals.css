@@ -6,6 +6,10 @@
 
 :root {
   --overlay-gradient: linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5));
+  --overlay-gradient-dark: linear-gradient(
+    rgba(2, 15, 8, 0.75),
+    rgba(2, 15, 8, 0.75)
+  );
   --color-background-primary: rgba(1, 10, 5, 0.9);
 }
 
@@ -142,6 +146,15 @@
           1x);
 }
 
+.section-gallery {
+  background-image: var(--overlay-gradient-dark),
+    url("/assets/images/mobile/backgrounds/gallery/gallery-bg.jpg");
+
+  background-image: var(--overlay-gradient-dark),
+    -webkit-image-set(url("/assets/images/mobile/backgrounds/gallery/gallery-bg.webp")
+          1x);
+}
+
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
@@ -205,6 +218,15 @@
 
     background-image: var(--overlay-gradient),
       -webkit-image-set(url("/assets/images/mobile/backgrounds/service/service-05-bg@2x.webp")
+            2x);
+  }
+
+  .section-gallery {
+    background-image: var(--overlay-gradient-dark),
+      url("/assets/images/mobile/backgrounds/gallery/gallery-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient-dark),
+      -webkit-image-set(url("/assets/images/mobile/backgrounds/gallery/gallery-bg@2x.webp")
             2x);
   }
 }
@@ -315,6 +337,15 @@
       -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-05-bg.webp")
             1x);
   }
+
+  .section-gallery {
+    background-image: var(--overlay-gradient-dark),
+      url("/assets/images/tablet/backgrounds/gallery/gallery-bg.jpg");
+
+    background-image: var(--overlay-gradient-dark),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/gallery/gallery-bg.webp")
+            1x);
+  }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
@@ -380,6 +411,15 @@
 
     background-image: var(--overlay-gradient),
       -webkit-image-set(url("/assets/images/tablet/backgrounds/service/service-05-bg@2x.webp")
+            2x);
+  }
+
+  .section-gallery {
+    background-image: var(--overlay-gradient-dark),
+      url("/assets/images/tablet/backgrounds/gallery/gallery-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient-dark),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/gallery/gallery-bg@2x.webp")
             2x);
   }
 }
@@ -469,6 +509,15 @@
       -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-05-bg.webp")
             1x);
   }
+
+  .section-gallery {
+    background-image: var(--overlay-gradient-dark),
+      url("/assets/images/desktop/backgrounds/gallery/gallery-bg.jpg");
+
+    background-image: var(--overlay-gradient-dark),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/gallery/gallery-bg.webp")
+            1x);
+  }
 }
 
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
@@ -536,6 +585,15 @@
       -webkit-image-set(url("/assets/images/desktop/backgrounds/service/service-05-bg@2x.webp")
             2x);
   }
+
+  .section-gallery {
+    background-image: var(--overlay-gradient-dark),
+      url("/assets/images/desktop/backgrounds/gallery/gallery-bg@2x.jpg");
+
+    background-image: var(--overlay-gradient-dark),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/gallery/gallery-bg@2x.webp")
+            2x);
+  }
 }
 
 /* ---- */
@@ -558,4 +616,57 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.gallery-carousel .swiper-wrapper {
+  align-items: center;
+}
+
+.gallery-carousel .swiper-slide {
+  scale: 0.55;
+  transition: scale 1000ms linear !important;
+}
+
+.gallery-carousel .swiper-slide-prev,
+.gallery-carousel .swiper-slide-next {
+  width: 121px !important;
+  height: 87px;
+  scale: 1;
+}
+
+.gallery-carousel .swiper-slide-active {
+  flex-shrink: 0;
+  width: 415px !important;
+  height: 294px !important;
+  scale: 1;
+  animation: slide-active-scale 1500ms linear;
+}
+
+@media screen and (min-width: 1280px) {
+  .gallery-carousel .swiper-slide {
+    scale: 0.77;
+  }
+
+  .gallery-carousel .swiper-slide-active {
+    flex-shrink: 0;
+    width: 606px !important;
+    height: 429px !important;
+    scale: 1;
+  }
+
+  .gallery-carousel .swiper-slide-prev,
+  .gallery-carousel .swiper-slide-next {
+    width: 312px !important;
+    height: auto;
+    scale: 1;
+  }
+}
+
+@keyframes slide-active-scale {
+  0% {
+    transform: scale(0.55);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

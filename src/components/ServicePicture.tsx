@@ -13,39 +13,40 @@ const ServicePicture = ({ order, name, shortcut }: Props) => {
       <source
         srcSet={`/assets/images/mobile/service/service-${num}-${shortcut}.webp 1x,
         /assets/images/mobile/service/service-${num}-${shortcut}@2x.webp 2x`}
-        media="(max-width: 767px"
+        media="(max-width: 767px)"
         type="image/webp"
       />
       <source
         srcSet={`/assets/images/tablet/service/service-${num}-${shortcut}.webp 1x,
         /assets/images/tablet/service/service-${num}-${shortcut}@2x.webp 2x`}
-        media="(max-width: 1279px"
+        media="(max-width: 1279px)"
         type="image/webp"
       />
       <source
         srcSet={`/assets/images/desktop/service/service-${num}-${shortcut}.webp 1x,
         /assets/images/desktop/service/service-${num}-${shortcut}@2x.webp 2x`}
-        media="(min-width: 1280px"
+        media="(min-width: 1280px)"
         type="image/webp"
       />
 
       <source
         srcSet={`/assets/images/mobile/service/service-${num}-${shortcut}.jpg 1x,
         /assets/images/mobile/service/service-${num}-${shortcut}@2x.jpg 2x`}
-        media="(max-width: 767px"
+        media="(max-width: 767px)"
       />
       <source
         srcSet={`/assets/images/tablet/service/service-${num}-${shortcut}.jpg 1x,
         /assets/images/tablet/service/service-${num}-${shortcut}@2x.jpg 2x`}
-        media="(max-width: 1279px"
+        media="(max-width: 1279px)"
       />
       <source
         srcSet={`/assets/images/desktop/service/service-${num}-${shortcut}.jpg 1x,
         /assets/images/desktop/service/service-${num}-${shortcut}@2x.jpg 2x`}
-        media="(min-width: 1280px"
+        media="(min-width: 1280px)"
       />
 
       <img
+        className="block"
         loading="lazy"
         src={`/assets/images/mobile/service/service-${num}-${shortcut}.jpg`}
         alt={name}

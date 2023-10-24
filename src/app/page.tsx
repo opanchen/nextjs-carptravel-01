@@ -1,4 +1,4 @@
-import { About, Hero, Services } from "@components";
+import { About, Gallery, Hero, Services } from "@components";
 
 const Home = () => {
   return (
@@ -6,6 +6,7 @@ const Home = () => {
       <Hero />
       <About />
       <Services />
+      <Gallery />
 
       <section
         id="career"
@@ -13,12 +14,12 @@ const Home = () => {
       >
         Section Choose Us
       </section>
-      <section
+      {/* <section
         id="gallery"
         className="min-h-[500px] w-full border-[1px] border-cyan-950"
       >
         Section Our Gallery
-      </section>
+      </section> */}
       <section
         id="contacts"
         className="min-h-[500px] w-full border-[1px] border-cyan-950"

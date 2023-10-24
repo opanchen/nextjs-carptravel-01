@@ -4,4 +4,6 @@ export { default as MainNav } from "./MainNav";
 export { default as Hero } from "./sections/Hero";
 export { default as About } from "./sections/About";
 export { default as Services } from "./sections/Services";
+export { default as Gallery } from "./sections/Gallery";
 export { default as ServicePicture } from "./ServicePicture";
+export { default as GalleryPicture } from "./GalleryPicture";
