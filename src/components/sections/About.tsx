@@ -1,6 +1,6 @@
 import { Container } from "@components";
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <section id="about" className="background-overlay section-about section">
       <Container>

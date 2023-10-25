@@ -4,7 +4,7 @@ type Props = {
   onClick(): void;
 };
 
-const MainNav = ({ onClick }: Props) => {
+const MainNav: React.FC<Props> = ({ onClick }: Props) => {
   return (
     <ul className="flex flex-col items-center gap-[48px] tablet:flex-row tablet:gap-[24px] desktop:gap-[56px]">
       <li onClick={onClick}>

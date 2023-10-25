@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Container, MainNav } from "@components";
 
-const AppBar = () => {
+const AppBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {

@@ -13,7 +13,7 @@ import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/pagination";
 
-const Services = () => {
+const Services: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const sliderRef = useRef<any>(null);
 

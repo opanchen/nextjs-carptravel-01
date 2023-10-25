@@ -11,6 +11,7 @@
     rgba(2, 15, 8, 0.75)
   );
   --color-background-primary: rgba(1, 10, 5, 0.9);
+  --color-background-input: rgba(255, 255, 255, 0.05);
 }
 
 * {
@@ -24,7 +25,7 @@
 }
 
 .section {
-  @apply py-[54px] tablet:py-[64px] desktop:py-[104px];
+  @apply py-[56px] tablet:py-[64px] desktop:py-[104px];
 }
 
 .text-heading {
@@ -43,12 +44,49 @@
   @apply text-[18px] tracking-[1.8px] tablet:text-[14px] tablet:tracking-[1.4px];
 }
 
+.form-label {
+  @apply relative flex flex-col gap-[4px] desktop:gap-[6px];
+}
+
+.text-form-label {
+  @apply text-[12px] font-extralight leading-[2.0] tracking-[2.4px];
+}
+
+.form-input {
+  @apply bg-gray-light block focus:outline-none placeholder:text-gray-strong placeholder:opacity-100;
+}
+
+.form-input-phone {
+  background-color: transparent;
+}
+
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:hover,
+.form-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.05) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.text-input {
+  @apply text-[13px] desktop:text-[20px] font-extralight leading-[1.846] desktop:leading-[1.2] text-justify;
+}
+
+.offer-text-title {
+  @apply text-[14px] tablet:text-[16px] desktop:text-[18px] leading-[1.428] tablet:leading-[1.25] desktop:leading-[1.333];
+}
+
+.offer-text-desc {
+  @apply text-[12px] font-extralight leading-[1.666] desktop:leading-[2.0];
+}
+
 /* * Background images & pseudo-elements: *  */
 
 .background-overlay {
   background-color: var(--color-background-primary);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .hero {
@@ -155,6 +193,16 @@
           1x);
 }
 
+.section-career {
+  background-position: center;
+  background-image: var(--overlay-gradient-dark),
+    url("/assets/images/mobile/backgrounds/career/career-large.jpg");
+
+  background-image: var(--overlay-gradient-dark),
+    -webkit-image-set(url("/assets/images/mobile/backgrounds/career/career-large.webp")
+          1x);
+}
+
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
@@ -227,6 +275,15 @@
 
     background-image: var(--overlay-gradient-dark),
       -webkit-image-set(url("/assets/images/mobile/backgrounds/gallery/gallery-bg@2x.webp")
+            2x);
+  }
+
+  .section-career {
+    background-image: var(--overlay-gradient-dark),
+      url("/assets/images/mobile/backgrounds/career/career-large@2x.jpg");
+
+    background-image: var(--overlay-gradient-dark),
+      -webkit-image-set(url("/assets/images/mobile/backgrounds/career/career-large@2x.webp")
             2x);
   }
 }
@@ -346,6 +403,15 @@
       -webkit-image-set(url("/assets/images/tablet/backgrounds/gallery/gallery-bg.webp")
             1x);
   }
+
+  .section-career {
+    background-image: var(--overlay-gradient-dark),
+      url("/assets/images/tablet/backgrounds/career/career.jpg");
+
+    background-image: var(--overlay-gradient-dark),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/career/career.webp")
+            1x);
+  }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
@@ -420,6 +486,15 @@
 
     background-image: var(--overlay-gradient-dark),
       -webkit-image-set(url("/assets/images/tablet/backgrounds/gallery/gallery-bg@2x.webp")
+            2x);
+  }
+
+  .section-career {
+    background-image: var(--overlay-gradient-dark),
+      url("/assets/images/tablet/backgrounds/career/career@2x.jpg");
+
+    background-image: var(--overlay-gradient-dark),
+      -webkit-image-set(url("/assets/images/tablet/backgrounds/career/career@2x.webp")
             2x);
   }
 }
@@ -518,6 +593,16 @@
       -webkit-image-set(url("/assets/images/desktop/backgrounds/gallery/gallery-bg.webp")
             1x);
   }
+
+  .section-career {
+    background-position: center;
+    background-image: var(--overlay-gradient-dark),
+      url("/assets/images/desktop/backgrounds/career/career.jpg");
+
+    background-image: var(--overlay-gradient-dark),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/career/career.webp")
+            1x);
+  }
 }
 
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
@@ -592,6 +677,15 @@
 
     background-image: var(--overlay-gradient-dark),
       -webkit-image-set(url("/assets/images/desktop/backgrounds/gallery/gallery-bg@2x.webp")
+            2x);
+  }
+
+  .section-career {
+    background-image: var(--overlay-gradient-dark),
+      url("/assets/images/desktop/backgrounds/career/career@2x.jpg");
+
+    background-image: var(--overlay-gradient-dark),
+      -webkit-image-set(url("/assets/images/desktop/backgrounds/career/career@2x.webp")
             2x);
   }
 }
@@ -669,4 +763,30 @@
   100% {
     transform: scale(1);
   }
+}
+
+/* .placeholder-prefix {
+  display: none;
+}
+
+.phone-input:placeholder-shown + .placeholder-prefix {
+  display: inline-block;
+}
+
+.phone-input::placeholder {
+  padding-left: 8px;
+} */
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background-color: var(--color-background-input);
+}
+
+.confirmation-checkbox:checked ~ .checkmark::after {
+  background-color: #fff;
 }

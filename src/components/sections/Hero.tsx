@@ -1,7 +1,7 @@
 import { Container } from "@components";
 import Link from "next/link";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section className="background-overlay hero pt-[104px] pb-[56px] tablet:pt-[124px] tablet:pb-[64px] desktop:pt-[130px] desktop:pb-[104px]">
       <Container>

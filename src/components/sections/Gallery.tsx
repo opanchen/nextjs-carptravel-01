@@ -12,7 +12,7 @@ import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const Gallery = () => {
+const Gallery: React.FC = () => {
   const sliderRef = useRef<any>(null);
   const sliderItems = [...gallery, ...gallery, gallery[2]];
 

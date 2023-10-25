@@ -6,7 +6,7 @@ type Props = {
   desc: string;
 };
 
-const GalleryPicture = ({ order, name, desc }: Props) => {
+const GalleryPicture: React.FC<Props> = ({ order, name, desc }: Props) => {
   const num = addLeadingZero(order);
   return (
     <picture className="block tablet:w-415px">

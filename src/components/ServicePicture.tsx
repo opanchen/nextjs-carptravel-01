@@ -6,7 +6,7 @@ type Props = {
   shortcut: string;
 };
 
-const ServicePicture = ({ order, name, shortcut }: Props) => {
+const ServicePicture: React.FC<Props> = ({ order, name, shortcut }: Props) => {
   const num = addLeadingZero(order);
   return (
     <picture className="self-end tablet:self-auto shrink-0">
