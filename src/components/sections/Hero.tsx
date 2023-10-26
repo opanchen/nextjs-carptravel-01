@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
 
             <Link
               href="#contacts"
-              className="hero-btn relative flex justify-center items-center  w-full h-[53px] tablet:h-[50px] desktop:h-[71px] text-[18px] desktop:text-[32px] font-bold leading-[2.666] tablet:leading-normal uppercase bg-gray-middle hover:bg-gray-strong focus:bg-gray-strong focus:outline-none"
+              className="hero-btn relative flex justify-center items-center  w-full h-[53px] tablet:h-[50px] desktop:h-[71px] text-[18px] desktop:text-[32px] font-bold leading-[2.666] tablet:leading-normal uppercase transition_prop bg-gray-middle hover:bg-gray-strong focus:bg-gray-strong focus:outline-none"
             >
               Join now
             </Link>

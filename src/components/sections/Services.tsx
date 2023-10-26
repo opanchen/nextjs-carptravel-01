@@ -90,9 +90,9 @@ const Services: React.FC = () => {
                                   className="desktop:relative"
                                 >
                                   <button
-                                    className={`text-[20px] tablet:text-[22px] desktop:text-[28px] font-extralight leading-[0.85] tablet:leading-[0.82] desktop:leading-[0.857] uppercase ${
+                                    className={`transition_prop opacity-[0.5] text-[20px] tablet:text-[22px] desktop:text-[28px] font-extralight leading-[0.85] tablet:leading-[0.82] desktop:leading-[0.857] uppercase hover:opacity-[1] ${
                                       isActive &&
-                                      "relative active-slider-tab pl-[16px] font-medium"
+                                      "opacity-[1] relative active-slider-tab pl-[16px] font-medium"
                                     }`}
                                     type="button"
                                     onClick={() =>

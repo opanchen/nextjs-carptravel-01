@@ -18,18 +18,18 @@ const Contacts: React.FC = () => {
                 <li className="flex flex-row-reverse gap-[20px]">
                   <p className="address-label min-w-[80px]">Phone number</p>
                   <ul className="tablet:w-[220px] translate-y-[-3px]">
-                    <li>
+                    <li className="flex justify-end">
                       <a
                         href="tel:+380981234567"
-                        className="address-text tablet:block tablet:text-right"
+                        className="contact-link address-text tablet:inline-block tablet:text-right"
                       >
                         +38 (098) 12 34 567
                       </a>
                     </li>
-                    <li>
+                    <li className="flex justify-end">
                       <a
                         href="tel:+380731234567"
-                        className="address-text tablet:block tablet:text-right"
+                        className="contact-link address-text tablet:block tablet:text-right"
                       >
                         +38 (073) 12 34 567
                       </a>
@@ -41,7 +41,7 @@ const Contacts: React.FC = () => {
                   <p className="address-label min-w-[80px]">E-mail</p>
                   <a
                     href="mailto:support@carptravel.com"
-                    className="address-text desktop:translate-y-[-2px]"
+                    className="contact-link address-text desktop:translate-y-[-2px]"
                   >
                     support@carptravel.com
                   </a>
@@ -53,42 +53,42 @@ const Contacts: React.FC = () => {
                   Follow us
                 </p>
                 <ul className="min-w-[80px]">
-                  <li>
+                  <li className="desktop:flex desktop:justify-end">
                     <a
                       href="https://www.facebook.com/"
                       target="_blank"
                       rel="nofollow noreferrer noopener"
-                      className="address-text desktop:block desktop:text-right"
+                      className="contact-link address-text desktop:block desktop:text-right"
                     >
                       facebook
                     </a>
                   </li>
-                  <li className="address-text">
+                  <li className="desktop:flex desktop:justify-end">
                     <a
                       href="https://www.instagram.com/"
                       target="_blank"
                       rel="nofollow noreferrer noopener"
-                      className="address-text desktop:block desktop:text-right"
+                      className="contact-link address-text desktop:block desktop:text-right"
                     >
                       instagram
                     </a>
                   </li>
-                  <li className="address-text">
+                  <li className="desktop:flex desktop:justify-end">
                     <a
                       href="https://www.youtube.com/"
                       target="_blank"
                       rel="nofollow noreferrer noopener"
-                      className="address-text desktop:block desktop:text-right"
+                      className="contact-link address-text desktop:block desktop:text-right"
                     >
                       youtube
                     </a>
                   </li>
-                  <li className="address-text">
+                  <li className="desktop:flex desktop:justify-end">
                     <a
                       href="https://www.tiktok.com/"
                       target="_blank"
                       rel="nofollow noreferrer noopener"
-                      className="address-text desktop:block desktop:text-right"
+                      className="contact-link address-text desktop:block desktop:text-right"
                     >
                       tiktok
                     </a>
