@@ -118,6 +118,29 @@
   background-position: center;
 }
 
+.logo-text {
+  leading-trim: both;
+  text-edge: cap;
+}
+
+.logo-element::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  /* background-color: aqua; */
+  /* background: url("/public/assets/images/logo-element.png"); */
+  background-image: url("/assets/images/logo/logo-element.png");
+  background-image: -webkit-image-set(
+    url("/assets/images/logo/logo-element.webp") 1x
+  );
+}
+
 .hero {
   background-image: var(--overlay-gradient), var(--extra-gradient-medium-top),
     url("/assets/images/mobile/backgrounds/hero/hero.jpg");
@@ -246,6 +269,13 @@
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
+  .logo-element::before {
+    background-image: url("/assets/images/logo/logo-element@2x.png");
+    background-image: -webkit-image-set(
+      url("/assets/images/logo/logo-element@2x.webp") 2x
+    );
+  }
+
   .hero {
     background-image: var(--overlay-gradient), var(--extra-gradient-medium-top),
       url("/assets/images/mobile/backgrounds/hero/hero@2x.jpg");
@@ -838,26 +868,6 @@
 }
 
 /* ---- */
-
-.logo-text {
-  leading-trim: both;
-  text-edge: cap;
-}
-
-.logo-element::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-color: aqua; */
-  /* background: url("/public/assets/images/logo-element.png"); */
-  background-image: url("/assets/images/logo-element.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
 
 .gallery-carousel .swiper-wrapper {
   align-items: center;

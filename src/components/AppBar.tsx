@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Container, MainNav } from "@components";
 
 const AppBar: React.FC = () => {
@@ -18,17 +17,12 @@ const AppBar: React.FC = () => {
       <Container>
         <nav className="flex justify-between items-center py-[36px] tablet:py-[24px]">
           <Link href="/" className="flex items-center flex-col">
-            {/* <div className="logo-element relative w-full h-[20px] outline-dashed"></div>
-            <span className="logo-text font-karantina, text-[14px] tracking-[2.59px] leading-[0.71]">
-              CarpTravel
-            </span> */}
-
-            <Image
-              src="/assets/images/logo.png"
-              alt="logo"
-              width={60}
-              height={24}
-            />
+            <div className="flex flex-col items-center">
+              <div className="logo-element relative w-full h-[22px]"></div>
+              <span className="inline-block logo-text font-karantina text-[14px] leading-none tracking-[2.59px]">
+                CarpTravel
+              </span>
+            </div>
           </Link>
 
           <button
