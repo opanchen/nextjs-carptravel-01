@@ -78,7 +78,7 @@ const CareerForm: React.FC = () => {
               })}
               type="email"
               aria-invalid={errors.email ? "true" : "false"}
-              placeholder="John Smith"
+              placeholder="johnsmith@email.com"
               className={`form-input pl-[8px] grow text-input ${
                 errors.email && "text-red caret-white"
               }`}
@@ -138,6 +138,7 @@ const CareerForm: React.FC = () => {
         <label className="form-label text-form-label">
           Message
           <textarea
+            {...register("message")}
             className={`form-input resize-none grow text-input h-[196px] tablet:h-[228px] tablet:w-[221px] desktop:h-[268px] desktop:w-[292px] px-[9px] `}
           />
         </label>

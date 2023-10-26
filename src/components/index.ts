@@ -11,3 +11,5 @@ export { default as GalleryPicture } from "./GalleryPicture";
 export { default as ErrorIcon } from "./ErrorIcon";
 export { default as FormErrorMessage } from "./FormErrorMessage";
 export { default as CareerForm } from "./CareerForm";
+export { default as ContactsForm } from "./ContactsForm";
+export { default as Contacts } from "./sections/Contacts";
