@@ -83,12 +83,14 @@ const Gallery: React.FC = () => {
         <button
           className="prev absolute z-10 bottom-0 left-[70px] desktop:left-[228px] text-[33px] font-thin desktop:leading-none  uppercase"
           type="button"
+          aria-label="Swipe to the previous picture"
         >
           Back
         </button>
         <button
           className="next absolute z-10 bottom-0 right-[70px] desktop:right-[228px] text-[33px] font-thin desktop:leading-none uppercase"
           type="button"
+          aria-label="Swipe to the next picture"
         >
           Next
         </button>

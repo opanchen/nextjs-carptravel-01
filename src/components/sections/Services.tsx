@@ -94,6 +94,7 @@ const Services: React.FC = () => {
                                       isActive &&
                                       "opacity-[1] relative active-slider-tab pl-[16px] font-medium"
                                     }`}
+                                    aria-label={`Switch current information slide into the "${name}"`}
                                     type="button"
                                     onClick={() =>
                                       handleSlideButtonClick(order - 1)

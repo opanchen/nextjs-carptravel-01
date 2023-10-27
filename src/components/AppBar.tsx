@@ -17,7 +17,10 @@ const AppBar: React.FC = () => {
       <Container>
         <nav className="flex justify-between items-center py-[36px] tablet:py-[24px]">
           <Link href="/" className="flex items-center flex-col">
-            <div className="flex flex-col items-center">
+            <div
+              aria-label="CarpTravel logo"
+              className="flex flex-col items-center"
+            >
               <div className="logo-element relative w-full h-[22px]"></div>
               <span className="inline-block logo-text font-karantina text-[14px] leading-none tracking-[2.59px]">
                 CarpTravel
@@ -29,6 +32,7 @@ const AppBar: React.FC = () => {
             className="block tablet:hidden py-[4px] text-[14px] tracking-[1.4px]"
             type="button"
             onClick={toggleMenu}
+            aria-label="Open mobile menu"
           >
             Menu
           </button>
@@ -40,14 +44,19 @@ const AppBar: React.FC = () => {
       </Container>
 
       {isMenuOpen && (
-        <div className="fixed-full z-10 flex justify-center items-center bg-overlay-burger backdrop-blur-[25px] overflow-hidden tablet:hidden">
-          <button
-            className="absolute top-[36px] right-[20px] py-[4px] text-[14px] tracking-[1.4px]"
-            onClick={toggleMenu}
-          >
-            Close
-          </button>
-          <MainNav onClick={() => setIsMenuOpen(false)} />
+        <div className="fixed-full z-10 bg-overlay-burger backdrop-blur-[25px] overflow-hidden tablet:hidden">
+          <Container>
+            <div className="relative min-h-screen flex justify-center items-center">
+              <button
+                className="absolute top-[42px] right-0 py-[4px] text-[14px] tracking-[1.4px]"
+                onClick={toggleMenu}
+                aria-label="Close mobile menu"
+              >
+                Close
+              </button>
+              <MainNav onClick={() => setIsMenuOpen(false)} />
+            </div>
+          </Container>
         </div>
       )}
     </header>
