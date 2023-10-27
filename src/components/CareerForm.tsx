@@ -1,6 +1,8 @@
 "use client";
 
 import { useForm, SubmitHandler } from "react-hook-form";
+
+import ReactInputMask from "react-input-mask";
 import { FormErrorMessage } from "@components";
 
 interface IFormInput {
@@ -27,7 +29,7 @@ const CareerForm: React.FC = () => {
   };
 
   //   to watch individual input by pass the name of the input
-  //   console.log(watch("isConfirmed"));
+  //  console.log(watch('fullName'));
 
   return (
     <form
@@ -36,7 +38,11 @@ const CareerForm: React.FC = () => {
     >
       <div className="flex flex-col tablet:flex-row gap-[16px] tablet:gap-[20px]">
         <div className="flex flex-col gap-[16px] tablet:w-[222px] desktop:w-[290px]">
-          <label className="form-label text-form-label">
+          <label
+            className={`form-label text-form-label ${
+              errors.fullName && "text-red"
+            }`}
+          >
             Full Name
             <input
               {...register("fullName", {
@@ -66,7 +72,11 @@ const CareerForm: React.FC = () => {
             )}
           </label>
 
-          <label className="form-label text-form-label">
+          <label
+            className={`form-label text-form-label ${
+              errors.email && "text-red"
+            }`}
+          >
             E-mail
             <input
               {...register("email", {
@@ -88,7 +98,11 @@ const CareerForm: React.FC = () => {
             )}
           </label>
 
-          <label className="form-label text-form-label">
+          <label
+            className={`form-label text-form-label ${
+              errors.position && "text-red"
+            }`}
+          >
             Position
             <input
               {...register("position", {
@@ -106,18 +120,29 @@ const CareerForm: React.FC = () => {
             )}
           </label>
 
-          <label className="form-label text-form-label">
+          <label
+            className={`form-label text-form-label ${
+              errors.phone && "text-red"
+            }`}
+          >
             Phone
             <div className="bg-gray-light flex items-center gap-[6px] pl-[8px]">
-              <span className="inline-block text-[13px] desktop:text-[20px] font-extralight leading-[1.846] desktop:leading-[1.2] text-justify">
+              <span className="inline-block shrink-0 text-white text-[13px] desktop:text-[20px] font-extralight leading-[1.846] desktop:leading-[1.2] text-justify">
                 + 38
               </span>
 
-              <input
+              <ReactInputMask
+                mask={"(999) 99 99 999"}
+                alwaysShowMask={false}
+                maskPlaceholder={""}
                 {...register("phone", {
                   required: "Phone is required",
-                  pattern: {
-                    value: /\d{10}/,
+                  minLength: {
+                    value: 15,
+                    message: "Incorrect phone",
+                  },
+                  maxLength: {
+                    value: 15,
                     message: "Incorrect phone",
                   },
                 })}

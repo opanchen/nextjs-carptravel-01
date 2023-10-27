@@ -28,7 +28,11 @@ const ContactsForm: React.FC = () => {
       onSubmit={handleSubmit(handleFormSubmit)}
     >
       <div className="flex flex-col desktop:flex-row gap-[24px] tablet:gap-[28px] desktop:gap-[20px] tablet:w-[220px] desktop:w-auto">
-        <label className="form-label text-form-label desktop:w-[292px]">
+        <label
+          className={`form-label text-form-label desktop:w-[292px] ${
+            errors.fullName && "text-red"
+          }`}
+        >
           Full Name
           <input
             {...register("fullName", {
@@ -58,7 +62,11 @@ const ContactsForm: React.FC = () => {
           )}
         </label>
 
-        <label className="form-label text-form-label desktop:w-[292px]">
+        <label
+          className={`form-label text-form-label desktop:w-[292px] ${
+            errors.email && "text-red"
+          }`}
+        >
           E-mail
           <input
             {...register("email", {
@@ -82,7 +90,11 @@ const ContactsForm: React.FC = () => {
       </div>
 
       <div className="flex flex-col gap-[16px] desktop:gap-[24px] tablet:grow">
-        <label className="form-label text-form-label">
+        <label
+          className={`form-label text-form-label ${
+            errors.message && "text-red"
+          }`}
+        >
           Message
           <textarea
             {...register("message", {
