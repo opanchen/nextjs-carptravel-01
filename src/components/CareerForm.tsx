@@ -18,7 +18,6 @@ const CareerForm: React.FC = () => {
   const {
     register,
     handleSubmit,
-    watch,
     reset,
     formState: { errors },
   } = useForm<IFormInput>();
@@ -27,9 +26,6 @@ const CareerForm: React.FC = () => {
     console.log("SUBMIT: ", JSON.stringify(data));
     reset();
   };
-
-  //   to watch individual input by pass the name of the input
-  //  console.log(watch('fullName'));
 
   return (
     <form

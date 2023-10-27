@@ -1,5 +1,7 @@
 # CarpTravel
 
+**View [DEMO](https://nextjs-carptravel-01.vercel.app/)**
+
 A simplified landing page of a Ukrainian travel company that shows the user information about the company, a basic set of services, and also provides an opportunity to send an application and join the team.
 
 ## Creating

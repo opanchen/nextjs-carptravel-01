@@ -55,9 +55,7 @@ const Services: React.FC = () => {
                 className={`background-overlay service-${shortcut} section w-full h-full bg-red`}
               >
                 <Container>
-                  {/* Content inner div */}
                   <div className="flex flex-col gap-[16px] tablet:gap-[36px] desktop:gap-[24px]">
-                    {/* Heading & Order div */}
                     <div className="flex flex-col tablet:flex-row tablet:items-center gap-[24px] tablet:gap-[170px]">
                       <h2 className="text-heading">
                         We <span className="font-medium">offer</span>
@@ -69,7 +67,6 @@ const Services: React.FC = () => {
                       </p>
                     </div>
 
-                    {/* Inner div */}
                     <div className="flex flex-col tablet:flex-row tablet:items-center desktop:items-stretch gap-[12px] tablet:gap-[20px]">
                       <ServicePicture
                         order={order}
@@ -77,9 +74,7 @@ const Services: React.FC = () => {
                         name={name}
                       />
 
-                      {/* Controls & text-content div */}
                       <div className="flex flex-col h-[370px] desktop:h-auto desktop:justify-between desktop:grow">
-                        {/* tagline & control-buttons div */}
                         <div className="flex flex-col-reverse tablet:flex-col gap-[24px]">
                           <ul className="flex flex-col gap-[16px]">
                             {services.map(({ order, shortcut, name }) => {

@@ -5,9 +5,7 @@ const Hero: React.FC = () => {
   return (
     <section className="background-overlay hero pt-[104px] pb-[56px] tablet:pt-[124px] tablet:pb-[64px] desktop:pt-[130px] desktop:pb-[104px]">
       <Container>
-        {/* Inner div */}
         <div className="relative flex flex-col gap-[24px] pt-[76px] tablet:flex-row tablet:gap-[48px] desktop:gap-[148px] tablet:pt-0">
-          {/* Headin Hero div */}
           <div className="flex flex-col gap-[24px] tablet:gap-[68px]">
             <h1 className="text-[40px] tablet:text-[67px] desktop:text-[98px] font-thin leading-[1.4] tracking-[-1.6px] tablet:tracking-[-2.68px] desktop:tracking-[-3.92px] tablet:leading-normal uppercase">
               <span className="inline-block font-medium ">Uncover</span>
@@ -24,7 +22,6 @@ const Hero: React.FC = () => {
             </p>
           </div>
 
-          {/* Offer div (with absolute element) */}
           <div className="flex flex-col gap-[24px] tablet:gap-[28px] tablet:w-[230px] desktop:w-[294px] desktop:ml-auto">
             <h2 className="absolute top-0 right-0 tablet:static tablet:mb-auto tablet:leading-normal">
               <p className="flex tablet:leading-normal">

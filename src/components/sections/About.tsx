@@ -5,7 +5,6 @@ const About: React.FC = () => {
     <section id="about" className="background-overlay section-about section">
       <Container>
         <div className="relative flex flex-col gap-[40px] tablet:gap-[64px]">
-          {/* Heading and info-column div */}
           <div className="flex flex-col tablet:flex-row gap-[8px] tablet:gap-[76px] desktop:gap-[24px] tablet:items-start">
             <h2 className="text-heading shrink-0 tablet:leading-none desktop:translate-y-[-6px]">
               <span className="tablet:text-justify">Who</span>{" "}

@@ -9,12 +9,6 @@ const Home = () => {
       <Career />
       <Gallery />
       <Contacts />
-      {/* <section
-        id="contacts"
-        className="min-h-[500px] w-full border-[1px] border-cyan-950"
-      >
-        Section Contact Us
-      </section> */}
     </>
   );
 };
